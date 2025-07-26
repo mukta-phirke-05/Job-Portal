@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerConnect - Find Your Dream Job</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #1e293b;
+            --accent-color: #f43f5e;
+            --light-bg: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: var(--secondary-color);
+        }
+        
+        .navbar {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(to right, rgba(79, 70, 229, 0.9), rgba(79, 70, 229, 0.8)), 
+                        url('https://placehold.co/1600x900') center/cover;
+            min-height: 60vh;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .file-upload {
+            border: 2px dashed #cbd5e1;
+            border-radius: 0.5rem;
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4338ca;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #0f172a;
+        }
+        
+        .tab-active {
+            border-bottom: 3px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar bg-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold" style="color: var(--primary-color);">CareerConnect</h1>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+                <a href="#jobs" class="text-gray-700 hover:text-indigo-600 font-medium">Browse Jobs</a>
+                <a href="#apply" class="text-gray-700 hover:text-indigo-600 font-medium">Apply Now</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="btn-secondary text-white px-6 py-2 rounded-full font-medium">Login</button>
+                <button class="btn-primary text-white px-6 py-2 rounded-full font-medium">Register</button>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-white flex items-center">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Find Your Dream Job Today</h1>
+                <p class="text-lg mb-8">Join thousands of professionals who found their perfect job match through our platform.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="relative flex-grow">
+                        <input type="text" placeholder="Job title, keywords" class="w-full px-6 py-4 rounded-full text-gray-800">
+                        <i class="fas fa-search absolute right-6 top-4 text-gray-500"></i>
+                    </div>
+                    <div class="relative flex-grow">
+                        <input type="text" placeholder="Location" class="w-full px-6 py-4 rounded-full text-gray-800">
+                        <i class="fas fa-map-marker-alt absolute right-6 top-4 text-gray-500"></i>
+                    </div>
+                    <button class="btn-primary px-8 py-4 rounded-full font-medium whitespace-nowrap">Search Jobs</button>
+                </div>
+                
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full">Software Engineer</span>
+                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full">Marketing</span>
+                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full">Finance</span>
+                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full">Healthcare</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Companies -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8">Trusted by Top Companies</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/180x100?text=TechCorp" alt="TechCorp company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/180x100?text=GlobalSoft" alt="GlobalSoft company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/180x100?text=FinEdge" alt="FinEdge company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/180x100?text=DesignHub" alt="DesignHub company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/180x100?text=HealthPlus" alt="HealthPlus company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="https://placehold.co/180x100?text=DataVision" alt="DataVision company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Listing Section -->
+    <section id="jobs" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Latest Job Openings</h2>
+                <div class="flex space-x-4">
+                    <button class="btn-secondary px-4 py-2 rounded-md">Filter <i class="fas fa-filter ml-2"></i></button>
+                    <button class="bg-gray-100 px-4 py-2 rounded-md">Sort <i class="fas fa-sort ml-2"></i></button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Job Card 1 -->
+                <div class="job-card bg-white rounded-xl shadow-md p-6 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                                <img src="https://placehold.co/60x60?text=TC" alt="TechCorp logo icon" class="w-10 h-10">
+                            </div>
+                            <h3 class="text-xl font-bold">Senior Frontend Developer</h3>
+                            <p class="text-gray-600">TechCorp</p>
+                        </div>
+                        <button class="text-indigo-600"><i class="far fa-bookmark text-xl"></i></button>
+                    </div>
+                    <div class="mb-4">
+                        <p><i class="fas fa-map-marker-alt text-gray-500 mr-2"></i> San Francisco, CA (Remote)</p>
+                        <p><i class="fas fa-dollar-sign text-gray-500 mr-2"></i> $120,000 - $150,000/year</p>
+                        <p><i class="fas fa-clock text-gray-500 mr-2"></i> Full-time</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-700 line-clamp-3">We're looking for an experienced frontend developer to join our team building cutting-edge web applications. You'll work with React, TypeScript, and modern CSS frameworks to create beautiful user experiences.</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-gray-500">Posted 2 days ago</div>
+                        <button class="btn-primary px-4 py-2 rounded-md text-sm">Apply Now</button>
+                    </div>
+                </div>
+                
+                <!-- Job Card 2 -->
+                <div class="job-card bg-white rounded-xl shadow-md p-6 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                                <img src="https://placehold.co/60x60?text=GS" alt="GlobalSoft logo icon" class="w-10 h-10">
+                            </div>
+                            <h3 class="text-xl font-bold">UX/UI Designer</h3>
+                            <p class="text-gray-600">GlobalSoft</p>
+                        </div>
+                        <button class="text-indigo-600"><i class="far fa-bookmark text-xl"></i></button>
+                    </div>
+                    <div class="mb-4">
+                        <p><i class="fas fa-map-marker-alt text-gray-500 mr-2"></i> New York, NY (Hybrid)</p>
+                        <p><i class="fas fa-dollar-sign text-gray-500 mr-2"></i> $95,000 - $125,000/year</p>
+                        <p><i class="fas fa-clock text-gray-500 mr-2"></i> Full-time</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-700 line-clamp-3">Join our design team to create intuitive and beautiful interfaces for enterprise software. You'll work closely with product managers and developers to transform complex workflows into simple, elegant solutions.</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-gray-500">Posted 1 week ago
