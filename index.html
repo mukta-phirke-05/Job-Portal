@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareerConnect - Find Your Dream Job</title>
+    <title>HireNow - Find Your Dream Job</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -65,6 +65,17 @@
         .tab-active {
             border-bottom: 3px solid var(--primary-color);
         }
+
+        /* Highlight effect for trusted company cards */
+        .company-card {
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .company-card:hover {
+            box-shadow: 0 8px 24px 0 rgba(79, 70, 229, 0.15), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+            transform: translateY(-6px) scale(1.05);
+            background: #fff;
+        }
+        }
     </style>
 </head>
 <body>
@@ -72,7 +83,7 @@
     <nav class="navbar bg-white sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <h1 class="text-2xl font-bold" style="color: var(--primary-color);">CareerConnect</h1>
+                <h1 class="text-2xl font-bold" style="color: var(--primary-color);">HireNow</h1>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
@@ -124,22 +135,22 @@
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold text-center mb-8">Trusted by Top Companies</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                <div class="flex justify-center items-center">
+                <div class="company-card flex justify-center items-center">
                     <img src="https://placehold.co/180x100?text=TechCorp" alt="TechCorp company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
                 </div>
-                <div class="flex justify-center items-center">
+                <div class="company-card flex justify-center items-center">
                     <img src="https://placehold.co/180x100?text=Flipkart" alt="Flipkart company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
                 </div>
-                <div class="flex justify-center items-center">
+                <div class="company-card flex justify-center items-center">
                     <img src="https://placehold.co/180x100?text=FinTech" alt="FinTech company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
                 </div>
-                <div class="flex justify-center items-center">
+                <div class="company-card flex justify-center items-center">
                     <img src="https://placehold.co/180x100?text=DesignHub" alt="DesignHub company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
                 </div>
-                <div class="flex justify-center items-center">
+                <div class="company-card flex justify-center items-center">
                     <img src="https://placehold.co/180x100?text=HealthPlus" alt="HealthPlus company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
                 </div>
-                <div class="flex justify-center items-center">
+                <div class="company-card flex justify-center items-center">
                     <img src="https://placehold.co/180x100?text=Accenture" alt="Accenture company logo" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
                 </div>
             </div>
